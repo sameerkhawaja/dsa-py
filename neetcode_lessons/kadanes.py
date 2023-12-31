@@ -2,8 +2,8 @@
 
 
 def kadanes(nums):
-    result = nums[0]
     window = 0
+    result = nums[0]
 
     for n in nums:
         # ensures that the window will never be negative
@@ -22,8 +22,8 @@ print(kadanes(nums))
 
 def slidingWindow(nums):
     # init max to be first index
-    maxSum = nums[0]
     currSum = 0
+    maxSum = nums[0]
 
     # indexes for where max occurs. since we have first index as the max, it will be 0
     maxL, maxR = 0, 0

@@ -6,11 +6,7 @@ def kadanes(nums):
     result = nums[0]
 
     for n in nums:
-        # ensures that the window will never be negative
-        # if the window in negative, our window will just be size 1 and point to current number
         window = max(window, 0) + n
-
-        # see if our window is larger than our overall max
         result = max(window, result)
 
     return result

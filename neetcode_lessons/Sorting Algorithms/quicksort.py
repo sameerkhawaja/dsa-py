@@ -13,7 +13,7 @@ def quickSort(nums, l, r):
     nums[r], nums[ptr] = nums[ptr], nums[r]
 
     # recursive call to itself
-    quickSort(nums, 0, ptr - 1)
+    quickSort(nums, l, ptr - 1)
     quickSort(nums, ptr + 1, r)
     return nums
 

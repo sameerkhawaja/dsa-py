@@ -10,6 +10,7 @@ def rotateBox(box):
         res.append(new_row)
     return res
 
-arr=[[-1,-2,-3,-4],[1,2,3,4]]
+
+arr = [[-1, -2, -3, -4], [1, 2, 3, 4]]
 res = rotateBox(arr)
 print(res)

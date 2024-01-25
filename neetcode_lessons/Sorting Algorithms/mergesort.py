@@ -3,21 +3,21 @@ from typing import List
 
 
 def sortArray(self, nums: List[int]) -> List[int]:
-    def mergeSort(arr: List[int], s: int, e: int):
-        if e == s:
+    def mergeSort(arr: List[int], l: int, r: int):
+        if r >= l:
             return arr
-        m = s + (e - s) // 2
-        mergeSort(arr, s, m)
-        mergeSort(arr, m + 1, e)
-        merge(arr, s, m, e)
+        m = (l + r) // 2
+        mergeSort(arr, l, m)
+        mergeSort(arr, m + 1, r)
+        merge(arr, l, m, r)
 
         return arr
 
-    def merge(arr: List[int], s: int, m: int, e: int):
+    def merge(arr: List[int], l: int, m: int, r: int):
         # create copies of both halfs of the arr
-        L = arr[s : m + 1]
-        R = arr[m + 1 : e + 1]
-        i, j, k = 0, 0, s
+        L = arr[l : m + 1]
+        R = arr[m + 1 : r + 1]
+        i, j, k = 0, 0, l
 
         # merge two halves
         while i < len(L) and j < len(R):

@@ -2,11 +2,11 @@ def quickSort(nums, l, r):
     if l >= r:
         return
 
-    pivot = nums[r]
+    pivotVal = nums[r]
     ptr = l
 
     for i in range(l, r):
-        if nums[i] < pivot:
+        if nums[i] < pivotVal:
             nums[i], nums[ptr] = nums[ptr], nums[i]
             ptr += 1
 

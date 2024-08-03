@@ -10,3 +10,11 @@ s_dict[
 # this returns cache miss
 s_dict = defaultdict(lambda: "cache miss")
 print(s_dict["test"])
+
+
+# for a dictionary, you cannot have a list be a key. to get around this, you have to covert the list into a tuple like so
+my_dict = defaultdict(list)
+count = [1, 2, 3]
+count_tuple = tuple(count)
+my_dict[count_tuple] = "my value"
+print(my_dict)
